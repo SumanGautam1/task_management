@@ -1,0 +1,10 @@
+# ignore the env file and folder
+.env
+/env/
+
+# ignore the database
+db.sqlite3
+
+# Ignore the cache folders
+*.__pycache__/
+
