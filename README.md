@@ -1,7 +1,7 @@
 # Django Task Management System
 
 ## Description
-This is a Task Management System  made using Django and Bootstrap.
+This is a Task Management System made using Django and Bootstrap.
 <br>
 
 ## Installation
@@ -31,6 +31,6 @@ This is a Task Management System  made using Django and Bootstrap.
     python manage.py makemigrations
     python manage.py migrate
 
-5. Start the development server:
+7. Start the development server:
     ```bash
     python manage.py runserver
