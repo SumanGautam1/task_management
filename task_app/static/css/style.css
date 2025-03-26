@@ -2,10 +2,6 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
-
-  .sidebar{
-    height: 100vh !important;
-  }
   
   .card {
     border: none;
@@ -81,7 +77,10 @@ body {
     color: #0d6efd;
     position: relative;
   }
-  
+  .sidebar .active{
+    background-color: #0d6efd;
+
+  }
   .nav-tabs .nav-link.active::after {
     content: '';
     position: absolute;
