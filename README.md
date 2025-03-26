@@ -34,3 +34,14 @@ This is a Task Management System made using Django and Bootstrap.
 7. Start the development server:
     ```bash
     python manage.py runserver
+
+## UI Screenshots
+
+### Dashboard Page
+![Dashboard](assets/dashboard.png?raw=true "Dashboard")
+
+### Manage Tasks Page
+![Manage Task](assets/manage.png?raw=true "Manage Task")
+
+## Task List Page
+![Task List](assets/tasklist.png?raw=true "Task List")

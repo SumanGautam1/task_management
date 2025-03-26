@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %}Index{% endblock title %}
 {% block content %}
-
 <div class="col-sm-9 mt-5">
   <div class="card shadow-lg">
     <div class="card-header bg-primary text-white p-4">
@@ -20,7 +19,6 @@
           </button>
         </div>
       </form>
-
       <!-- Task Categories Tabs -->
       <ul class="nav nav-tabs nav-fill mb-4" id="taskTabs" role="tablist">
         <li class="nav-item" role="presentation">
@@ -42,7 +40,6 @@
           </button>
         </li>
       </ul>
-
       <!-- Tab Content -->
       <div class="tab-content" id="taskTabsContent">
         <!-- All Tasks Tab -->
@@ -53,7 +50,6 @@
               <div class="col-4 ">Due Date</div>
               <div class="col-3 ">Priority &darr; </div>
             </div>
-
             {% if all_task %}
             {% for task in all_task %}
             <div class="task-item">
@@ -70,25 +66,19 @@
                     <span class="badge bg-warning">Priority</span>
                     {% endif %}
                   {% endif %}
-
                   {% if task.status == 'missed' %}
                     <span class="badge bg-danger">Missed</span>
                   {% endif %} 
-                 
                   {% if task.status == 'completed' %}
                   <span class="badge bg-success">Completed</span>
                   {% endif %}
                 </div>
               </div>
-
             </div>
             {% endfor %}
             {% endif %}
-
-
           </div>
         </div>
-
         <!-- Active Tasks Tab -->
         <div class="tab-pane fade" id="active-tasks" role="tabpanel">
           <div class="task-list">
@@ -98,19 +88,15 @@
               <div class="col-2">Priority</div>
               <div class="col-2">Mark</div>
             </div>
-
             {% if active_tasks_name %}
             {% for task in active_tasks_name %}
             <div class="task-item">
               <div class="col-5">
                 {{task.name}}
-                
               </div>
-
               <div class="col-3 ps-3">
                 {{task.due_date}}
               </div>
-
               <div class="col-2 ps-5">
                 <div class="task-actions">
                   {% if task.priority <= 4 %}
@@ -120,23 +106,19 @@
                   {% endif %}
                 </div>
               </div>
-
               <div class="col-2 ps-4">
                 <a data-bs-toggle="modal" class="btn btn-success"
                   data-bs-target="#editTask{{task.id}}">
                   Done
                 </a>
               </div>
-
             </div>
             {% endfor %}
             {% else %}
             <h5 class="ms-3">No Tasks Are Active Currently</h5>
             {% endif %}
-
           </div>
         </div>
-
         <!-- Completed Tasks Tab -->
         <div class="tab-pane fade" id="completed-tasks" role="tabpanel">
           <div class="task-list">
@@ -147,7 +129,6 @@
               <div class="task-actions">
                 <span class="badge bg-success">Completed</span>
               </div>
-
             </div>
             {% endfor %}
             {% else %}
@@ -156,7 +137,6 @@
           </div>
         </div>
       </div>
-
       <!-- Task Summary -->
       <div class="task-summary mt-4 pt-3 border-top">
         <div class="row text-center">
@@ -177,8 +157,6 @@
     </div>
   </div>
 </div>
-
-
 <!-- Modal -->
 {% if active_tasks_name %}
 {% for task in active_tasks_name %}

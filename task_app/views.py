@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView
 from django.views import View
 from .models import Tasks
 from .forms import TasksForm
@@ -48,8 +48,7 @@ class ManageTask(IndexView):
     template_name = 'manage.html'
 
     def get_context_data(self, **kwargs):
-        data = super().get_context_data(**kwargs)  # Reuse IndexView's data
-        # You can add more context data specific to the dashboard here if needed
+        data = super().get_context_data(**kwargs)
         return data
     
 class UpdateTask(UpdateView):

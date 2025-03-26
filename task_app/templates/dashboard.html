@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Task Management Dashboard{% endblock title %}
 {% block content %}
-
 <!-- Main Content -->
 <div class="col-sm-9 px-4 py-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
@@ -9,7 +8,6 @@
       <i class="bi bi-plus-lg me-2"></i> + New Task
     </button>
   </div>
-
   <!-- Statistics Cards -->
   <div class="row g-4 mb-5">
     <div class="col-md-3">
@@ -49,7 +47,6 @@
       </div>
     </div>
   </div>
-
   <!-- Recent Tasks and Progress -->
   <div class="row">
     <!-- Recent Tasks -->
@@ -89,7 +86,6 @@
         </div>
       </div>
     </div>
-
     <!-- Progress Charts -->
     <div class="col-lg-4">
       <div class="card mb-4">
@@ -116,17 +112,14 @@
                 {{task.days_left}}
               </div>
               {% endfor %}
-
               {% else %}
               No tasks yet
               {% endif %}
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 {% endblock content %}
